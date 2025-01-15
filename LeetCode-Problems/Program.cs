@@ -5,9 +5,18 @@
         static void Main(string[] args)
         {
             TwoSum twoSum = new TwoSum();
-            var result = twoSum.Do([98, 2, 4, 55, 232, 97, 3], 100);
-            foreach(in)
-            Console.WriteLine(result.ToString());
+            var result = twoSum.Do([0, 2, 4, 55, 232, 97, 900-55], 900);
+            
+            string resultString = "";
+            foreach(var i in result)
+            {
+                resultString += i + ",";
+
+            }
+            resultString = resultString.Remove(resultString.Length-1);
+            Console.WriteLine($"[{resultString}]");
+
+
         }
     }
 }

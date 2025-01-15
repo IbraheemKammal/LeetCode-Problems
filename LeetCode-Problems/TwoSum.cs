@@ -16,10 +16,14 @@ namespace LeetCode_Problems
             {
                 int current = nums[firstIndex];
                 int currentTargetReminder;
-                if (current > target) currentTargetReminder = current - target;
-                else currentTargetReminder = target - current;
+                currentTargetReminder = target - current;
+
                 secondIndex = Array.IndexOf(nums, currentTargetReminder);
-                if (secondIndex != -1) result = new int[] { firstIndex, secondIndex };
+                if (secondIndex != -1 && firstIndex != secondIndex)
+                {
+                    result = new int[] { firstIndex, secondIndex };
+                    break;
+                }
             }
             return result;
 
